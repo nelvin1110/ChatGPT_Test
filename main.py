@@ -51,12 +51,12 @@ class ChatGPT:
 	
     def get_response(self):
         response = openai.Completion.create(
-	            model=self.model,
-	            prompt=self.prompt.generate_prompt(),
-	            temperature=self.temperature,
-	            frequency_penalty=self.frequency_penalty,
-	            presence_penalty=self.presence_penalty,
-	            max_tokens=self.max_tokens
+	            model="gpt-3.5-turbo",
+	            prompt=self.prompt.generate_prompt()
+# 	            temperature=self.temperature,
+# 	            frequency_penalty=self.frequency_penalty,
+# 	            presence_penalty=self.presence_penalty,
+# 	            max_tokens=self.max_tokens
                 )
         
         print("AI回答內容：")        
